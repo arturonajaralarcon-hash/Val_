@@ -50,10 +50,6 @@ if check_password():
             "Nano Banana Pro (Gemini 3 Pro Image)": "gemini-3-pro-preview", 
             "Nano Banana (Gemini 2.5 Flash Image)": "gemini-2.5-flash-image"
         }
-        
-        # Selección de formato (se enviará como texto en el prompt)
-        aspect_ratio = st.selectbox("Formato (Aspect Ratio)", 
-                                   ["2:3", "9:16", "1:1", "16:9", "3:2", "4:5", "5:4"])
 
     # --- SECCIÓN 1: IDENTIDAD DE LA MODELO (VALERIA) ---
     st.subheader("1. Identidad de Valeria (Obligatorio)")
@@ -121,23 +117,25 @@ if check_password():
                 try:
                     st.write("Configurando prompt...")
                     
-                    # 1. Prompt Maestro con Aspect Ratio incrustado en texto
+                    # 1. Prompt Maestro
                     instrucciones_base = """
-                    Genera una imagen de la modelo virtual "Valeria Desvelada".
+                    Genera una imagen realista de la modelo virtual "Valeria Desvelada".
                     INSTRUCCIONES DE IDENTIDAD:
                     1. Replica EXÁCTAMENTE las características faciales y corporales del primer grupo de imágenes (Identidad).
                     INSTRUCCIONES DE ESTILO:
                     2. Usa el segundo grupo de imágenes (si existen) solo para pose e iluminación.
                     """
                     
-                    # Aquí inyectamos el aspect ratio como texto
-                    prompt_final_texto = f"{instrucciones_base}\n\nPARAMETROS TÉCNICOS:\nFormato de imagen: {aspect_ratio}\n\nDESCRIPCIÓN DE ESCENA:\n{prompt_usuario}"
+                    prompt_final_texto = f"{instrucciones_base}\n\nDESCRIPCIÓN DE ESCENA:\n{prompt_usuario}"
 
                     # 2. Combinación de recursos
                     contenido_solicitud = [prompt_final_texto] + refs_modelo_activas + refs_estilo_activas
 
-                    # 3. Llamada al modelo (Sin aspect_ratio en config)
+                    # 3. Llamada al modelo
                     st.write(f"Renderizando con {modelo_nombre}...")
+                    
+                    # Configuración básica de seguridad (BLOCK_ONLY_HIGH intenta ser menos restrictivo)
+                    # Nota: Imagen 2 y 3 tienen filtros estrictos por defecto.
                     response = client.models.generate_content(
                         model=model_map[modelo_nombre],
                         contents=contenido_solicitud,
@@ -146,26 +144,36 @@ if check_password():
                         )
                     )
 
-                    # Validación
-                    if response and response.parts:
-                        resultado = None
-                        for part in response.parts:
-                            if part.inline_data:
-                                resultado = PIL.Image.open(BytesIO(part.inline_data.data))
-                                break
+                    # Validación con diagnóstico
+                    if response and response.candidates:
+                        # Verificamos si hubo un bloqueo
+                        reason = response.candidates[0].finish_reason
                         
-                        if resultado:
-                            st.session_state.historial.insert(0, resultado)
-                            if len(st.session_state.historial) > 10:
-                                st.session_state.historial.pop()
+                        if reason == "STOP" and response.parts:
+                             # Todo bien
+                            resultado = None
+                            for part in response.parts:
+                                if part.inline_data:
+                                    resultado = PIL.Image.open(BytesIO(part.inline_data.data))
+                                    break
+                            
+                            if resultado:
+                                st.session_state.historial.insert(0, resultado)
+                                if len(st.session_state.historial) > 10:
+                                    st.session_state.historial.pop()
 
-                            st.subheader("Resultado Final")
-                            st.image(resultado, use_container_width=True, caption=f"Valeria Desvelada | Formato {aspect_ratio}")
-                            status.update(label="Generación exitosa", state="complete")
+                                st.subheader("Resultado Final")
+                                st.image(resultado, use_container_width=True, caption="Valeria Desvelada")
+                                status.update(label="Generación exitosa", state="complete")
+                            else:
+                                st.error("El modelo devolvió 'STOP' pero no hay imagen. Intenta de nuevo.")
                         else:
-                            st.error("El modelo no devolvió una imagen válida.")
+                            # Hubo un bloqueo
+                            st.error(f"⚠️ La generación fue bloqueada por el modelo. Razón: {reason}")
+                            if reason == "SAFETY":
+                                st.warning("Intenta usar fotos de referencia menos explícitas (evita trajes de baño o piel expuesta) o suaviza el prompt.")
                     else:
-                        st.error("La API no devolvió contenido.")
+                        st.error("La API no devolvió candidatos. Error de conexión o bloqueo total.")
 
                 except Exception as e:
                     st.error(f"Error crítico: {e}")
