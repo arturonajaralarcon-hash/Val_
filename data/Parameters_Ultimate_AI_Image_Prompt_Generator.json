@@ -1,38 +1,34 @@
 {
-  "geminiGemsPromptRecipes": {
+  "valeriaPromptRecipes": {
     "usageNotes": [
-      "Feel free to be creative and add context and various details to the prompt.",
-      "At the end of the prompt, use any necessary parameters.",
-      "Not all categories must be used in every prompt."
+      "Use these ingredients to build a photorealistic fashion or lifestyle prompt for Valeria Desvelada.",
+      "Mix and match categories to create unique scenarios.",
+      "Always prioritize realistic skin textures and natural lighting."
     ],
     "sharedParameters": {
-      "cameraAngle": ["Eye-level", "Low Angle", "High Angle", "Bird's Eye View", "Worm's Eye View", "Dutch Angle", "Over-the-shoulder", "Ground-level", "Aerial View", "Tilted", "Close-up", "Wide Angle", "Medium Shot", "Long Shot", "Panoramic", "Side View", "Front View", "Rear View", "Diagonal", "Symmetrical", "Asymmetrical", "Three-quarter View", "Top-down", "Bottom-up"],
-      "imageType": ["Photograph", "Sketch", "Watercolor", "Prismacolor", "Pencil Drawing", "Ink Drawing", "Digital Rendering", "Oil Painting", "Acrylic Painting", "Charcoal Drawing", "Pastel Drawing", "Collage", "Mixed Media", "3D Model", "Blueprint", "CAD Drawing", "Architectural Visualization", "Etching", "Lithograph", "Fresco", "Mosaic", "Graphic Design", "Photomontage", "Woodcut Print"],
-      "colorPalette": ["Neutral Tones", "Earthy Hues", "Dark Tones", "Rich Colors", "Cool Tones", "Warm Tones", "Pastels", "Monochromatic", "Muted Colors", "Natural Colors", "Bright Colors", "Primary Colors", "Secondary Colors", "Tertiary Colors", "Analogous Colors", "Complementary Colors", "Split-Complementary Colors", "Tetradic Colors", "Custom Palette", "Gradient", "Black and White", "Sepia", "Soft Tones", "Bright Tones"],
-      "lighting": ["Soft, Natural Light", "Diffused, Overcast", "Bright, Even Lighting", "Golden Hour Light", "Harsh High Contrast", "Backlighting", "Side Lighting", "Front Lighting", "Silhouette Lighting", "Reflective Light", "Twilight Lighting", "Sunset Lighting", "Sunrise Lighting", "Moonlight", "Artificial Lighting", "Spotlight", "Candlelight", "Shadow Play", "Ambient Lighting", "Street Lighting", "Accent Lighting", "Flood Lighting", "Diffused Morning Light", "Dramatic Lighting"],
-      "location": ["Urban", "Historic City", "Coastal Town", "Countryside", "Suburban Area", "Mountainous Region", "Desert", "Island", "Forest", "Riverfront", "Lakefront", "Park", "Plaza", "Campus", "Industrial Area", "Residential Neighborhood", "Downtown", "Seaside", "Hilltop", "Valley", "Rural Village", "Resort", "Winery", "Marina"],
-      "timeOfDay": ["Morning", "Afternoon", "Noon", "Sunset", "Evening", "Night", "Twilight", "Dawn", "Dusk", "Golden Hour", "Blue Hour", "Midday", "Pre-dawn", "Late Morning", "Early Afternoon", "Late Afternoon", "Early Evening", "Midnight", "Pre-dusk", "High Noon", "Late Night", "Early Morning", "Mid-evening"],
-      "mood": ["Calm", "Serene", "Mysterious", "Majestic", "Innovative", "Dynamic", "Relaxing", "Inviting", "Bold", "Stark", "Nostalgic", "Cozy", "Peaceful", "Reflective", "Exciting", "Energetic", "Tranquil", "Intimate", "Solemn", "Joyful", "Vibrant", "Rustic", "Chic", "Industrial"]
+      "cameraAngle": ["Eye-level", "Low Angle (Heroic)", "High Angle (Selfie)", "Dutch Angle", "Over-the-shoulder", "Close-up (Portrait)", "Extreme Close-up (Makeup)", "Medium Shot", "Full Body Shot", "Cowboy Shot", "Profile View", "Three-quarter View", "Back View", "Wide Angle (Environmental)", "Macro", "Selfie Mode", "Mirror Selfie"],
+      "imageType": ["Editorial Photography", "Candid Snapshot", "Street Style", "Studio Portrait", "Runway Shot", "Social Media Post (Instagram)", "Polaroid", "Film Photography (35mm)", "Backstage Photo", "Lookbook", "Campaign Ad", "Test Shoot", "Beauty Shot", "Fitness Photography", "Travel Vlog Still", "Red Carpet Photo"],
+      "colorPalette": ["Neutral Tones", "Pastels", "Vibrant Neons", "Monochromatic Black & White", "Earth Tones", "Jewel Tones", "Cool Blues", "Warm Golden", "Retro Kodachrome", "Cinematic Teal & Orange", "High Contrast", "Muted Matte", "Soft Pink & Peach", "Cyberpunk Neon", "Natural Skin Tones", "Dark & Moody"],
+      "lighting": ["Golden Hour", "Soft Window Light", "Harsh Sunlight", "Rembrandt Lighting", "Butterfly Lighting", "Ring Light", "Neon Signs", "Flash Photography (Direct)", "Studio Softbox", "Dappled Light (Tree shadows)", "Candlelight", "City Night Lights", "Blue Hour", "Overcast (Soft)", "Rim Light", "Volumetric Fog", "Disco Lights"],
+      "location": ["Parisian Cafe", "NYC Street", "Modern Loft", "Luxury Hotel Lobby", "Beach at Sunset", "Gym", "Art Gallery", "Rooftop Bar", "Subway Station", "Vintage Record Store", "Flower Field", "Desert", "Infinity Pool", "Minimalist Studio", "Red Carpet Event", "Backstage Dressing Room", "Bedroom", "Supermarket (Aesthetic)", "Tennis Court"],
+      "timeOfDay": ["Morning Coffee Time", "Golden Hour", "High Noon", "Blue Hour", "Midnight", "Sunset", "Sunrise", "Afternoon", "Late Night"],
+      "mood": ["Confident", "Playful", "Mysterious", "Elegant", "Casual", "Romantic", "Edgy", "Melancholic", "Energetic", "Relaxed", "Professional", "Dreamy", "Nostalgic", "Bold", "Sensual", "Chic", "Cozy"]
     },
-    "exteriorArchitecture": {
-      "promptPrefix": "Architectural",
-      "architecturalStyle": ["Modern", "Gothic", "Futuristic", "Mediterranean", "Brutalist", "Victorian", "Minimalist", "Art Deco", "Colonial", "Contemporary", "Baroque", "Renaissance", "Neoclassical", "Tudor", "Prairie", "Craftsman", "Industrial", "Postmodern", "Bauhaus", "International", "Organic", "High-tech", "Beaux-Arts", "Deconstructivism"],
-      "buildingType": ["Residential", "Religious", "Commercial", "Hospitality", "Civic", "Cultural", "Educational", "Industrial", "Healthcare", "Government", "Mixed-use", "Recreational", "Transportation", "Agricultural", "Institutional", "Retail", "Sports"],
-      "typeOfArchitecture": ["House", "Cabin", "Office Building", "Resort Hotel", "Government Building", "Multi-family Home", "Art Museum", "Library", "Skyscraper", "Bridge", "Train Station", "Hospital", "Mansion", "School", "University", "Stadium", "Mall", "Theater", "Concert Hall", "Community Center", "Church", "Villa", "Synagogue", "Castle"],
-      "architecturalInspiration": ["Bauhaus", "Notre Dame", "Space Age", "Greek Isles", "Le Corbusier", "Queen Anne", "Tadao Ando", "Frank Lloyd Wright", "Antoni Gaudi", "Zaha Hadid", "Richard Neutra", "Louis Kahn", "Mies van der Rohe", "Alvar Aalto", "Renzo Piano", "Oscar Niemeyer", "Philip Johnson", "Eero Saarinen", "Norman Foster", "Rem Koolhaas", "Santiago Calatrava", "Frank Gehry", "I. M. Pei", "Moshe Safdie"],
-      "focalPoint": ["Main Entrance", "Ornate Facade", "Entire Building", "Courtyard", "Structural Elements", "Roofline", "Windows", "Doorway", "Balcony", "Staircase", "Garden", "Pool", "Sculpture", "Archway", "Canopy", "Skyline", "Pedestrian Pathway", "Bridge", "Dome", "Spire", "Tower", "Plaza", "Patio"],
-      "texturesOrMaterials": ["Glass", "Steel", "Concrete", "Wood", "Brick", "Stone", "Plaster", "Terracotta", "Metal", "Composite materials", "Stucco", "Tile", "Marble", "Granite", "Copper", "Aluminum", "Vinyl", "Asphalt", "Gravel", "Sandstone", "Limestone", "Slate", "Bamboo", "Fiber Cement"],
-      "details": ["Clean Lines", "Large Windows", "Gargoyles", "Spires", "Arches", "Balconies", "Columns", "Exposed Beams", "Minimal adornment", "Decorative Trim", "Bay Windows", "Dynamic Shapes", "Open Spaces", "Historic Signage", "Mosaics", "Murals", "Frescoes", "Skylights", "Cladding", "Lattice", "Wrought Iron", "Ornamental Gardens", "Green Roof", "Water Features"]
+    "fashionRecipe": {
+      "promptPrefix": "Fashion Editorial",
+      "style": ["Haute Couture", "Streetwear", "Minimalist", "Boho Chic", "Y2K", "Old Money", "Athleisure", "Grunge", "Preppy", "Avant-Garde", "Business Casual", "Vintage 70s", "Cyberpunk", "Cottagecore", "Rock & Roll", "Glamour", "Normcore"],
+      "outfit": ["Silk Evening Gown", "Oversized Hoodie & Biker Shorts", "Trench Coat", "Vintage Denim Jacket", "Leather Pants", "Tailored Suit", "Summer Sundress", "Yoga Set", "Bikini & Sarong", "Fur Coat", "Knitted Sweater", "Corset Top", "Cargo Pants", "Blazer & Jeans", "Sequined Dress", "Tennis Skirt"],
+      "brandInspiration": ["Gucci", "Balenciaga", "Zara", "Nike", "Chanel", "Off-White", "Versace", "Prada", "Miu Miu", "Jacquemus", "Dior", "Alexander Wang", "Levi's", "Adidas", "Supreme", "Reformation", "Skims"],
+      "fabricTexture": ["Silk", "Denim", "Leather", "Velvet", "Lace", "Cotton", "Wool", "Latex", "Sequin", "Tulle", "Satin", "Chiffon", "Tweed", "Faux Fur", "Spandex", "Linen"],
+      "accessories": ["Statement Earrings", "Sunglasses", "Designer Handbag", "Beret", "Pearl Necklace", "Gold Chains", "Scarf", "Baseball Cap", "High Heels", "Combat Boots", "Sneakers", "Headphones", "Rings"],
+      "makeup": ["No-makeup makeup", "Red Lip", "Smokey Eye", "Glitter", "Graphic Liner", "Glossy Skin", "Matte Finish", "Bleached Brows", "Natural Glow", "Vampy Lip"]
     },
-    "interiorDesign": {
-      "promptPrefix": "Interior design",
-      "style": ["Modern", "Scandinavian", "Industrial", "Bohemian", "Minimalist", "Mid-century Modern", "Rustic", "Traditional", "Transitional", "Art Deco", "Coastal", "Farmhouse", "Contemporary", "Eclectic", "Mediterranean", "French Country", "Shabby Chic", "Asian Zen", "Glam", "Urban Loft", "Cottagecore", "Gothic Revival", "Maximalist", "Retro"],
-      "roomType": ["Living Room", "Bedroom", "Kitchen", "Bathroom", "Dining Room", "Office", "Study", "Library", "Foyer", "Home Theater", "Guest Room", "Nursery", "Gym", "Attic", "Conservatory", "Pantry", "Sunroom", "Meditation Room", "Dressing Room", "Studio", "Laundry Room", "Game Room", "Hobby Room", "Wine Cellar"],
-      "inspiration": ["Frank Lloyd Wright", "Alvar Aalto", "Le Corbusier", "Antoni Gaudi", "Tadao Ando", "Charles and Ray Eames", "Louis Kahn", "Andrea Palladio", "Kelly Wearstler", "Eileen Gray", "Dorothy Draper", "Joanna Gaines", "Philippe Starck", "Jean Nouvel", "Renzo Piano", "Pierre-Yves Rochon", "Rachel Ashwell", "Tadao Ando", "Coco Chanel", "Jean-Michel Basquiat", "William Morris", "John Soane", "Iris Apfel", "Marcel Breuer"],
-      "focalPoint": ["Fireplace", "Bed", "Kitchen Island", "Bathtub", "Dining Table", "Desk", "Bookshelves", "Reading Nook", "Grand Staircase", "Screen", "Bedside Table", "Crib", "Exercise Equipment", "Skylight", "Indoor Garden", "Shelving", "Lounge Chairs", "Meditation Space", "Vanity", "Art Supplies", "Washer and Dryer", "Gaming Console", "Craft Table", "Wine Racks"],
-      "texturesOrMaterials": ["Glass", "Wood", "Metal", "Rattan", "Concrete", "Walnut", "Stone", "Marble", "Granite", "Velvet", "Linen", "Shiplap", "Rubber Flooring", "Mixed Textures", "Terracotta", "Cotton", "Bamboo", "Silk", "Exposed Brick", "Floral Prints", "Leather", "Patterned Wallpaper", "Cork"],
-      "brand": ["IKEA", "HAY", "Restoration Hardware", "Anthropologie", "Muji", "West Elm", "Pottery Barn", "Ethan Allen", "RH Modern", "Jonathan Adler", "Serena & Lily", "Magnolia", "Technogym", "CB2", "Pier 1", "French Heritage", "Laura Ashley", "Japanese Style", "Versace", "Crate & Barrel", "Cath Kidston", "Ralph Lauren", "Vinotemp"],
-      "detail": ["Clean Lines", "Minimal Adornment", "Exposed Beams", "Eclectic Decor", "Simple Geometry", "Sleek Furniture", "Wooden Beams", "Crown Molding", "Mix of Styles", "Geometric Patterns", "Nautical Themes", "Vintage Accents", "Minimalist Equipment", "Unique Art Pieces", "Arched Doorways", "Rustic Cabinets", "Distressed Furniture", "Shoji Screens", "Mirrors", "Industrial Decor", "Wicker Baskets", "Dark Wood Paneling", "Collectibles", "Vintage Decor"]
+    "ugcRecipe": {
+      "promptPrefix": "UGC Lifestyle",
+      "activity": ["Drinking Coffee", "Applying Skincare", "Working on Laptop", "Eating Pizza", "Walking the Dog", "Doing Yoga", "Shopping", "Reading a Book", "Taking a Selfie", "Laughing with friends", "Cooking", "Driving", "Fixing Hair", "Trying on clothes"],
+      "vibe": ["That Girl Aesthetic", "Lazy Sunday", "Productive Morning", "Night Out", "Travel Diary", "Gym Grind", "Cozy Vibes", "Summer State of Mind", "City Girl", "Wholesome", "Chaos"],
+      "imperfections": ["Messy Bun", "Slightly blurred motion", "Casual posture", "Unmade bed in background", "Coffee stain", "Windblown hair", "No makeup", "Laugh lines", "Phone reflection in mirror"],
+      "cameraType": ["iPhone 15 Pro", "Disposable Camera", "Webcam", "GoPro", "Polaroid Instax", "Film Grain", "Flash on"]
     }
   }
 }
