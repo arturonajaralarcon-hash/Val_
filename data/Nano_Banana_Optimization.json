@@ -1,24 +1,44 @@
 {
+  "name": "Nano Banana Pro Template (Gemini 3 Pro)",
+  "description": "Advanced structure optimized for Gemini 3 Pro's high-fidelity image generation capabilities, focusing on photorealism and complex prompt understanding.",
   "prompt": {
-    "main_subject": "",
+    "main_subject": "Valeria Desvelada",
     "action": "",
     "environment": "",
     "mood": "",
-    "art_style": [],
-    "camera_settings": {"shot_type": "", "lens": "", "depth_of_field": ""},
-    "lighting": {"type": [], "direction": "", "intensity": ""},
-    "colors": {"palette": [], "dominant_colors": []},
-    "texture_materials": [],
-    "additional_details": [],
-    "negatives": []
+    "art_style": ["Photorealistic", "Hyper-detailed", "Raw Photography"],
+    "camera_settings": {
+      "shot_type": "",
+      "lens_focal_length": "85mm (Portrait) / 24mm (Arch)",
+      "aperture": "f/1.8 (Bokeh) / f/8 (Sharp)",
+      "shutter_speed": "",
+      "sensor_type": "Full Frame 35mm / Medium Format"
+    },
+    "lighting": {
+      "type": [],
+      "global_illumination": "Ray Traced Global Illumination",
+      "shadows": "Soft contact shadows / Hard directional shadows",
+      "direction": "",
+      "intensity": ""
+    },
+    "colors": {
+      "grading": "Cinematic Color Grading",
+      "palette": [],
+      "tone_mapping": "High Dynamic Range (HDR)"
+    },
+    "surface_details": {
+      "skin_texture": ["visible pores", "peach fuzz", "natural imperfections", "no plastic skin"],
+      "materials": ["subsurface scattering", "physically based rendering (PBR)", "tactile textures"]
+    },
+    "imperfections": ["Film grain", "Chromatic aberration", "Motion blur", "Natural clutter"],
+    "negatives": ["cartoon", "3d render", "illustration", "plastic skin", "bad anatomy", "blurry", "low resolution"]
   },
   "parameters": {
-    "aspect_ratio": "1:1",
-    "quality_level": "standard",
-    "consistency_level": "standard",
-    "unusual_aesthetics": "none",
-    "style_reference": "",
-    "character_reference": "",
-    "image_reference": ""
+    "aspect_ratio": "9:16",
+    "output_resolution": "Best possible",
+    "generation_mode": "quality",
+    "safety_filter_handling": "block_only_high",
+    "raw_mode": true,
+    "magic_enhance": false
   }
 }
