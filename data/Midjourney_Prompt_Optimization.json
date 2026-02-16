@@ -1,42 +1,55 @@
 {
+  "name": "Midjourney V6/V7 Template",
+  "description": "Structure for generating high-end Midjourney prompts compatible with Valeria Desvelada's aesthetic.",
   "prompt": {
-    "main_subject": "",
-    "action": "",
-    "environment": "",
-    "mood": "",
-    "art_style": [],
-    "camera_settings": {"shot_type": "", "lens": "", "depth_of_field": ""},
-    "lighting": {"type": [], "direction": "", "intensity": ""},
-    "colors": {"palette": [], "dominant_colors": []},
-    "texture_materials": [],
-    "additional_details": []
+    "main_subject": "Valeria Desvelada, [insert outfit details]",
+    "action": "[insert pose or activity]",
+    "environment": "[insert location]",
+    "mood": "[insert mood, e.g., Editorial, Candid, Moody]",
+    "art_style": ["Photorealistic", "Fashion Photography", "UGC", "Raw Style"],
+    "camera_settings": {
+      "shot_type": "Full body shot or Medium shot",
+      "lens": "85mm f/1.8",
+      "depth_of_field": "Shallow depth of field"
+    },
+    "lighting": {
+      "type": ["Natural Lighting", "Softbox", "Golden Hour"],
+      "direction": "Frontal",
+      "intensity": "Soft"
+    },
+    "colors": {
+      "palette": ["Neutral tones", "Skin tones"],
+      "dominant_colors": []
+    },
+    "texture_materials": ["Realistic Skin Texture", "Fabric details"],
+    "additional_details": ["8k", "High Fidelity", "No artifacts"]
   },
   "parameters": {
-    "aspect_ratio": "1:1",
-    "chaos": 0,
-    "stylize": 100,
-    "quality": 1,
-    "version": "7",
+    "aspect_ratio": "--ar 9:16",
+    "chaos": "--c 0",
+    "stylize": "--s 250",
+    "quality": "--q 1",
+    "version": "--v 6.1",
     "seed": null,
-    "weird": 0,
-    "stop": 100,
+    "weird": "--w 0",
+    "stop": "--stop 100",
     "tile": false,
-    "no": [],
-    "image_weight": 1,
-    "style_reference": "",
-    "style_weight": 100,
-    "character_reference": "",
-    "character_weight": 100,
+    "no": ["--no cartoon, illustration, drawing, 3d render, plastic skin, bad anatomy"],
+    "image_weight": "--iw 2",
+    "style_reference": "--sref [URL_OPTIONAL]",
+    "style_weight": "--sw 100",
+    "character_reference": "--cref [URL_VALERIA_FACE]",
+    "character_weight": "--cw 100",
     "exp": 0,
-    "raw": false,
+    "raw": "--style raw",
     "turbo": false,
-    "fast": false,
+    "fast": true,
     "relax": false,
-    "repeat": 1,
+    "repeat": "--r 1",
     "omni_reference": ""
   },
   "prompt_weights": {
-    "use_weights": false,
-    "weighted_elements": []
+    "use_weights": true,
+    "weighted_elements": ["Valeria Desvelada::2", "Photorealism::1.5"]
   }
 }
